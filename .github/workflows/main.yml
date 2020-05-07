@@ -28,7 +28,7 @@ jobs:
            cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
            .\MSBuild.exe $Env:GITHUB_WORKSPACE  /p:PublishProfile=win-x64 /p:Configuration=Release
     - name: zip build
-      run: 7z a -tzip -mx=9 $Env:GITHUB_WORKSPACE\airplay2.zip $Env:GITHUB_WORKSPACE\build $Env:GITHUB_WORKSPACE\Release
+      run: 7z a -tzip -mx=9 $Env:GITHUB_WORKSPACE\airplay2.zip $Env:GITHUB_WORKSPACEx64\Release\
 
     - name: Create Release
       id: create_release
