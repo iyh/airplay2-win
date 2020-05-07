@@ -30,20 +30,6 @@ jobs:
     - name: zip build
       run: 7z a -tzip -mx=9 $Env:GITHUB_WORKSPACE\airplay2.zip $Env:GITHUB_WORKSPACE\x64\Release\
 
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@latest
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: |
-          Changes in this Release
-          - First Change
-          - Second Change
-        draft: false
-        prerelease: false
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
