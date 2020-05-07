@@ -36,4 +36,4 @@ jobs:
         # Artifact name
         name: "airplay2.zip"
         # Directory containing files to upload
-        path: $Env:GITHUB_WORKSPACE\airplay2.zip
+        path: airplay2.zip
