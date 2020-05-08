@@ -61,7 +61,7 @@ jobs:
 #         asset_content_type: application/zip
 
     - name: Upload to release
-      uses: Shopify/upload-to-release
+      uses: Shopify/upload-to-release@v1
       with:
         name: airplay2.zip
         path: airplay2.zip
